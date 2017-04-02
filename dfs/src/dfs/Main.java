@@ -36,5 +36,6 @@ public class Main {
         N = sc.nextInt();
         nQueen(-1);
         System.out.println(count);
+        System.out.println("finish");
     }
 }
