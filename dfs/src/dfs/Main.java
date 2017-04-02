@@ -6,7 +6,7 @@ public class Main {
   static int N;
   static int count;
   static int[] chess= new int[15];
-   public static boolean promising(int line) {
+   public static boolean check(int line) {
 		// TODO Auto-generated method stub
 		for(int i=0; i<line; i++){
 			if(chess[i]==chess[line]||Math.abs(chess[line]-chess[i])==line-i)
@@ -25,7 +25,7 @@ public class Main {
 		
 		for(int i=0;i<N;i++){
 			chess[line+1]=i;
-			if(promising(line+1)){
+			if(check(line+1)){
 				nQueen(line+1);
 			}
 		}
@@ -36,6 +36,6 @@ public class Main {
         N = sc.nextInt();
         nQueen(-1);
         System.out.println(count);
-        System.out.println("finish");
+        
     }
 }
